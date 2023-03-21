@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Dropbar from './components/Dropbar';
+import Dropbart from './components/Dropbart';
+import Navbar from './components/Navbar';
 
 function App() {
+  const[val,setVal]=useState(false)
+  const[val1,setVal1]=useState(false)
+
+  let ishoverval=(res)=>{
+    setVal(res)};
+    let ishoverval1=(res)=>{
+      setVal1(res)};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{backgroundColor:"black"}}>
+      <Navbar ishr={ishoverval} ishr1={ishoverval1} />
+      <Dropbar val={val}/>
+      <Dropbart val1={val1}/>
     </div>
   );
 }
 
 export default App;
+
