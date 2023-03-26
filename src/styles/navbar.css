@@ -1,159 +1,157 @@
-.navbar{
-    text-align: center;
-    background-color:  rgb(20, 20, 20);
-    height:60px;
-    display: flex;
-    justify-content: space-between;
-   }
-   .navlinks{
-      
-      padding-top: 16px;
-      box-sizing: border-box;
+.navbar {
+  text-align: center;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+}
+.scrll {
+  background: none;
+  background-color: rgb(20, 20, 20);
+}
+.navlinks {
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+.navlinks a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  padding-left: 14px;
+}
+.logo {
+  margin-top: 18px;
+  margin-left: 50px;
+}
+.part1 {
+  display: flex;
+  width: 48%;
+  justify-content: space-between;
+}
 
-   }
-   .navlinks a{
-      text-decoration: none;
-      color: white;
-      font-size: 15px;
-      padding-left: 14px;
-      
-   }
-   .logo{
-      margin-top: 18px;
-      margin-left: 50px;
-   }
-   .part1{
-      display: flex;
-      width: 48%;
-      justify-content: space-between;
-   }
-   
-   .secright{
-    display: flex;
-    
-   }
-   #im1:hover{
-cursor: pointer;
+.secright {
+  display: flex;
+}
+#im1:hover {
+  cursor: pointer;
+}
+#search {
+  pointer-events: none;
+  height: 30px;
+  width: 0px;
+  background-image: url("../assets/search.png");
+  background-size: 25px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  text-indent: 30px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  border: none;
+  transition-property: all;
+}
+.sp1 {
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  height: 0;
+  margin-left: 10px;
+  width: 0;
+  margin-top: 12px;
+  transition-delay: 0.1ms;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+.sp2 {
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 7px 7px;
+  height: 0;
+  margin-left: 10px;
+  width: 0;
+  margin-top: 12px;
+}
+.tog1 {
+  display: flex;
+  margin-top: 9px;
+  margin-left: 12px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.sp1hvr {
+  transform: rotate(180deg);
+  transition-delay: 0.1ms;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+.dropbar {
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  background-color: #000000cc;
+  color: white;
+  top: 65px;
+  right: 58px;
+  transition-property: all;
+  transition-duration: 0.11s;
+  transition-delay: 0.11s;
+}
 
+.dropbar div {
+  margin: 13px;
+  padding-right: 15px;
+}
 
-   }
-   #search{
-    pointer-events: none;
-    height: 30px;
-    width: 0px;
-    background-image: url('../assets/search.png');
-    background-size: 25px;
-    background-position: 10px;
-    background-repeat: no-repeat;
-    text-indent: 30px;
-    background-color:  rgb(20, 20, 20);
-    color: white;
-    border: none;
-     transition-property:all; 
-   }
-   .sp1
-   {
-    border-color: #fff transparent transparent;
-    border-style: solid;
-    border-width: 5px 5px 0;
-    height: 0;
-    margin-left: 10px;
-    width: 0;
-    margin-top: 12px;
-    transition-delay: 0.1ms;
-    transition-timing-function: ease-out;
-    transition-duration: 0.1s;
-   }
-   .sp2
-   {
-    border-color: #fff transparent transparent;
-    border-style: solid;
-    border-width: 7px 7px ;
-    height: 0;
-    margin-left: 10px;
-    width: 0;
-    margin-top: 12px;
-   }
-   .tog1{
-    display: flex;
-    margin-top: 9px;
-    margin-left: 12px;
-    margin-right: 15px;
-    cursor: pointer;
+.im2up {
+  opacity: 0;
+  pointer-events: none;
+  right: 84px;
+  width: 13px;
+  height: 10px;
+  position: fixed;
+  top: 52px;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-delay: 0.1s;
+}
+.dropbaractive {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-out;
+}
 
-   }
-   .sp1hvr{
-    transform: rotate(180deg);
-    transition-delay: 0.1ms;
-    transition-timing-function: ease-out;
-    transition-duration: 0.1s;
-   }
-   .dropbar{
-      z-index: -1;
-      opacity: 0;
-    position: absolute;
-     background-color: #000000e6;
-     color: white;
-     top: 65px;
-    right: 58px;
-    transition-property: all;
-    transition-duration: 0.3s;
-    transition-delay: 0.3s;
-   }
-   
-      .dropbar div{
-    margin: 13px;
-    padding-right: 15px;
-   }
-   
-   .im2up{
-      opacity: 0;
-    pointer-events: none;
-   right: 84px;
-    width: 13px;
-    height: 10px;
-    position: absolute;
-    top: 52px;
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-delay: 0.1s;
-   }
-   .dropbaractive{
-      opacity: 1;
-      z-index: 2;
-    pointer-events: auto;
-    transition-property:all;
-    transition-duration: 0.2s;
-    transition-delay: 0.1s;
-    transition-timing-function: ease-out;
-   }
-
-   .secright{
-      margin-top: 6px;
-      margin-right: 40px;
-   }
-   .secright>div{
-padding-left: 10px;
-   }
-   .dropbar1active1{
-      opacity: 1;
-      pointer-events: auto;
-      z-index: 3;
-       transition-property:all;
-      transition-duration: 0.2s;
-      transition-delay: 0.1s;
-      transition-timing-function: ease-out; 
-      cursor: pointer;
-   }
-   .im2uphvr{
-      opacity: 1;
-   }
-   .alinks:hover{
-text-decoration: underline;
-   }
- .dropbar1content{
-   height: 30px;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
-} 
+.secright {
+  margin-top: 6px;
+  margin-right: 40px;
+}
+.secright > div {
+  padding-left: 10px;
+}
+.dropbar1active1 {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 3;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+.im2uphvr {
+  opacity: 1;
+}
+.alinks:hover {
+  text-decoration: underline;
+}
+.dropbar1content {
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

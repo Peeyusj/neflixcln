@@ -8,7 +8,12 @@ import netflixlogo from "../assets/netflixlogo.png";
 const Navbar = (props) => {
   const [ishover, setIsHover] = useState(false);
   const [ishover1, setIsHover1] = useState(false);
-
+  const [isscrolled, setIsScrolled] = useState(false);
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    //return()=>(window.onscroll=null);
+  };
+  console.log(isscrolled);
   props.ishr(ishover);
   props.ishr1(ishover1);
   const imgclick = () => {
@@ -23,9 +28,6 @@ const Navbar = (props) => {
   let a = useRef();
   useEffect(() => {
     let handler = (e) => {
-      console.log(e.target)
-      console.log(a.current)
-
       if (!a.current.contains(e.target)) {
         document.getElementById("search").style.pointerEvents = "none";
         document.getElementById("search").style.border = "none";
@@ -43,7 +45,7 @@ const Navbar = (props) => {
   });
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${isscrolled && "scrll"}`}>
       <div className="part1">
         <div className="logo">
           <img
@@ -95,7 +97,7 @@ const Navbar = (props) => {
         >
           Children
         </div>
-        <div className="notification">
+        <div className="notification" style={{ cursor: "pointer" }}>
           <img
             style={{ width: "25px", height: "25px", marginTop: "13px" }}
             src={bell}

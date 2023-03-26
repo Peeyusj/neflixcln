@@ -24,44 +24,38 @@ const Dropbar = (props) => {
         onMouseOut={() => setIsHoverDrop1(false)}
       >
         <div className="dropbar1content">
-          <img
-            src={netflix}
-            alt=""
-            style={{  width: "20px", height: "20px" }}
-          />
-          <div style={{  }} className="alinks">Children</div>
+          <img src={netflix} alt="" style={{ width: "20px", height: "20px" }} />
+          <div style={{}} className="alinks">
+            Children
+          </div>
         </div>
         <div className="dropbar1content">
-          <img
-            src={pencil}
-            alt=""
-            style={{  width: "20px", height: "20px" }}
-          />
-          <div style={{  }} className="alinks" >Manage Profiles</div>
+          <img src={pencil} alt="" style={{ width: "20px", height: "20px" }} />
+          <div style={{}} className="alinks">
+            Manage Profiles
+          </div>
         </div>
         <div className="dropbar1content">
-          <img
-            src={prmng}
-            alt=""
-            style={{  width: "20px", height: "20px" }}
-          />
-          <div style={{  }} className="alinks">Transfer Profiles</div>
+          <img src={prmng} alt="" style={{ width: "20px", height: "20px" }} />
+          <div style={{}} className="alinks">
+            Transfer Profiles
+          </div>
         </div>
         <div className="dropbar1content">
-          <img
-            src={profile}
-            alt=""
-            style={{  width: "20px", height: "20px" }}
-          />
-          <div style={{  }} className="alinks">Accounts</div>
+          <img src={profile} alt="" style={{ width: "20px", height: "20px" }} />
+          <div style={{}} className="alinks">
+            Accounts
+          </div>
         </div>
         <div className="dropbar1content">
           <img
             src={question}
             alt=""
-            style={{  width: "20px", height: "20px" }}
+            style={{ width: "20px", height: "20px" }}
           />
-          <div style={{ }} className="alinks">Help Centre</div>
+          <div style={{}} className="alinks">
+            Help Centre
+          </div>
         </div>
         <hr style={{ color: "white" }} />
         <div style={{ textAlign: "center", marginLeft: "27px" }}>
