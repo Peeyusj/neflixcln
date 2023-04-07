@@ -1,0 +1,85 @@
+.vidposter{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    z-index: 1;
+    pointer-events: auto;
+   
+}
+/* .videopostcontainer{
+    top: 60px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    background-color: aqua;
+    z-index: 12;
+    height: 430px;
+
+} */
+ .contentvid{
+display: flex;
+justify-content: space-between;
+align-items: center;
+top: 170px;
+left: 0px;
+position: absolute;
+width: 100%;
+object-fit: cover;
+z-index: 1;
+pointer-events: none;
+color: white;
+font-weight: bold;
+font-size: 18px;
+
+}
+.muteimg{
+    border: 1px solid white;
+    border-radius: 60%;
+    width: 37px;
+    height: 30px;
+    padding: 4px;
+}
+.Rated{
+    width: 80px;
+    border-left: 2px solid white;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 6px;
+    background-color: rgba(255, 255, 255, 0.579);
+}
+.rightcontent{
+    z-index: 1;
+    display: flex;
+    width:130px ;
+    height: 32px;
+    margin-top: 140px;
+}
+.rightcontent img{
+    pointer-events: all;
+
+}
+.pbtns{
+    width: 40%;
+    margin-left: 45px;
+}
+.pbtns button{
+ 
+    width:128px;
+    height:50px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+  
+}
+ 
+.leftcontent img{
+margin-left: 56px;
+}
+.infobtn{
+    background-color:#ffffff5e;
+    color: white;
+    font-weight: bold;
+    
+}

@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-  height: 200vh;
+  height: 500vh;
   position: relative;
   width: 100%;
+  z-index: 1;
+  background-color:#141414;
+  
 }

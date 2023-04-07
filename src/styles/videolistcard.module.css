@@ -1,0 +1,132 @@
+.imgfirst{
+    height:128px ;
+    width: 227px;
+    border-radius: 8px;
+  }
+.videoitem {
+    position: relative;
+    margin: 0px 3px;
+    height: 127px;
+    width: 100%;
+    z-index: 1;
+   
+  }
+.icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0px 1px 10px 10px;
+
+}
+.icon img{
+  width: 24px;
+  height: 20px;}
+
+.icon1{
+  display: flex; }
+ 
+.content{
+  
+ color: white;
+ font-size: 16px;
+ height: 100px;
+ width: 100%;
+display: none;
+
+}
+.inforow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 1px;
+  margin-left: 10px;
+
+}
+ .videoitem:hover{
+  transform: scale(1.4,1.37);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 3px 3px 6px #141414;
+  background-color: #141414;
+  border-radius:6px;
+  border: 0px;
+  height: 267px;
+  position: relative;
+  z-index: 12; 
+  top:-70px;
+  display: block;
+ 
+}
+.videoitem:hover .content{
+ margin-top:13px ;
+ font-size: 13px;
+ height: 120px;
+ position: relative;
+ z-index: 18;
+ display: block;
+}
+
+.videoitem:hover .imgfirst{
+  height: 138px;
+  border-radius: 0px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  position: relative;
+  display: block;
+} 
+
+.genres{
+  display: flex;
+  align-content: center;
+  margin-left: 10px;
+  font-size: 12px;
+}
+.vido{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 138px;
+  width: 100%;
+  z-index: 11;
+  object-fit: cover;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+
+}
+ .muteimg{
+  position: absolute;
+  top: 114px;
+  right: 7px;
+  height: 19px;
+  width: 26px;
+  z-index: 13;
+  border-radius: 60%;
+  border:1px solid #ffffff70;
+
+} 
+.muteimg:hover{
+  background-color: rgba(255, 255, 255, 0.54);
+}
+.muteimg:focus{
+  border:2px solid #ffffff70;
+  background-color: white;
+}
+/* .vidodiv{
+  position: ;
+  z-index: 10;
+  top: 0px;
+  left: 0px;
+  height: 138px;
+ border-radius: 12px;
+
+} */
+
+
+/* .contenthvr{
+background-color: black;
+ transition-property: all;
+transition-duration: 0.2s;
+z-index: 3;
+font-size: 12px; 
+display:block;
+pointer-events: auto;}   */

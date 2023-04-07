@@ -7,6 +7,7 @@
   width: 100%;
   top: 0px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 10%, transparent);
+  z-index: 6;
 }
 .scrll {
   background: none;
@@ -15,6 +16,7 @@
 .navlinks {
   padding-top: 16px;
   box-sizing: border-box;
+  margin-left: 10px;
 }
 .navlinks a {
   text-decoration: none;
@@ -28,8 +30,8 @@
 }
 .part1 {
   display: flex;
-  width: 48%;
-  justify-content: space-between;
+  width: 60%;
+  /* justify-content: space-between; */
 }
 
 .secright {
@@ -155,3 +157,19 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+@media (min-width: 1024px) and (max-width:1250px){
+  .navlinks a{
+    font-size: 12px;
+  }
+  } 
+  @media (min-width: 939px) and (max-width:1023px){
+    .navlinks a{
+      font-size: 10px;
+    }
+    } 
+ @media (max-width: 939px){
+.navlinks{
+  display: none;
+}
+} 

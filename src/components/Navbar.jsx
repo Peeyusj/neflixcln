@@ -11,7 +11,6 @@ const Navbar = (props) => {
   const [isscrolled, setIsScrolled] = useState(false);
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
-    //return()=>(window.onscroll=null);
   };
   console.log(isscrolled);
   props.ishr(ishover);
@@ -22,6 +21,7 @@ const Navbar = (props) => {
     document.getElementById("search").style.width = "200px";
     document.getElementById("search").style.transitionDuration = "1.5s";
     document.getElementById("search").style.transitionDelay = "0.1s";
+    document.getElementById("search").style.visibility = "visible";
     document.getElementById("im1").style.visibility = "hidden";
     document.getElementById("im1").style.pointerEvents = "none";
   };
@@ -34,6 +34,8 @@ const Navbar = (props) => {
         document.getElementById("search").style.width = "0px";
         document.getElementById("search").style.transitionDuration = "1.5s";
         document.getElementById("search").style.transitionDelay = "0.1s";
+        document.getElementById("search").style.visibility = "hidden";
+
         document.getElementById("im1").style.visibility = "visible";
         document.getElementById("im1").style.pointerEvents = "auto";
       }
@@ -72,6 +74,7 @@ const Navbar = (props) => {
               position: "relative",
               top: "-10px",
               left: "30px",
+              visibility: "hidden",
             }}
             id="search"
             type="text"

@@ -1,0 +1,56 @@
+.listoutercontainer {
+  display: flex;
+  position: relative;
+  transform: translateX(0px);
+  width: 100%;
+  height: 127;
+  transition: all 1s ease;
+  margin-left: 50px;
+  z-index: 1;
+}
+
+.rightarrow {
+  position: absolute;
+  left: 1465px;
+  width: 53px;
+  height: 350px;
+  height: max-content;
+  z-index: 2;
+  padding: 41px 3px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: -1px;
+  cursor: pointer;
+}
+.rightarrow:hover {
+  background-color: rgba(0, 0, 0, 0.778);
+}
+.leftarrow {
+  cursor: pointer;
+  width: 53px;
+  height: 350px;
+  position: absolute;
+  height: max-content;
+  left: 0px;
+  z-index: 2;
+  padding: 41px 3px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.778);
+  margin: auto;
+  margin-top: -1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.leftarrowhvrnok {
+  opacity: 0;
+  pointer-events: none;
+}
+.leftarrowhvrok {
+  opacity: 1;
+  pointer-events: auto;
+}
+.arrow {
+  background-color: rgba(0, 0, 0, 0.52);
+  height: 100%;
+  width: 50px;
+}

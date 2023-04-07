@@ -51,8 +51,14 @@ const Dropbart = (props) => {
             {ishoverDrop2 && console.log("hiii")}
             <div className="im" style={{ zIndex: "2" }}>
               <img src={data.imm} alt="hiiiiiiii" style={{ zIndex: "2" }} />
-              <div className="back1" style={{ zIndex: "-2",pointerEvents:"none" }}></div>
-              <div className="back2" style={{ zIndex: "-2",pointerEvents:"none" }}></div>
+              <div
+                className="back1"
+                style={{ zIndex: "-2", pointerEvents: "none" }}
+              ></div>
+              <div
+                className="back2"
+                style={{ zIndex: "-2", pointerEvents: "none" }}
+              ></div>
             </div>
             <div
               className="txt"
