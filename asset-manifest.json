@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/neflixcln/static/css/main.f7fd85ea.css",
-    "main.js": "/neflixcln/static/js/main.57d4b209.js",
+    "main.css": "/neflixcln/static/css/main.013c1d51.css",
+    "main.js": "/neflixcln/static/js/main.56d2dc8b.js",
     "static/js/787.58b933ed.chunk.js": "/neflixcln/static/js/787.58b933ed.chunk.js",
+    "static/media/friends.mp4": "/neflixcln/static/media/friends.e529feab261b61b7e403.mp4",
+    "static/media/Robin.mp4": "/neflixcln/static/media/Robin.b5e7e0d7314411c4a62c.mp4",
+    "static/media/volume.png": "/neflixcln/static/media/volume.9c79a6f75e107be36f8d.png",
     "static/media/netflix.png": "/neflixcln/static/media/netflix.527703da8b9b371425c9.png",
+    "static/media/nosound.png": "/neflixcln/static/media/nosound.1721d7905bc958ad3510.png",
     "static/media/question.png": "/neflixcln/static/media/question.426c92d5153ea53d1c9b.png",
     "static/media/user.png": "/neflixcln/static/media/user.98b33aba7d9355dd73ae.png",
     "index.html": "/neflixcln/index.html",
-    "main.f7fd85ea.css.map": "/neflixcln/static/css/main.f7fd85ea.css.map",
-    "main.57d4b209.js.map": "/neflixcln/static/js/main.57d4b209.js.map",
+    "main.013c1d51.css.map": "/neflixcln/static/css/main.013c1d51.css.map",
+    "main.56d2dc8b.js.map": "/neflixcln/static/js/main.56d2dc8b.js.map",
     "787.58b933ed.chunk.js.map": "/neflixcln/static/js/787.58b933ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7fd85ea.css",
-    "static/js/main.57d4b209.js"
+    "static/css/main.013c1d51.css",
+    "static/js/main.56d2dc8b.js"
   ]
 }
