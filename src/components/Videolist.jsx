@@ -52,13 +52,14 @@ const Videolist = (props) => {
             (items) =>
               +items.rating.average > 8 && (
                 <Videolistcard
-                  id={items.id}
-                  image={items.image.original}
-                  name={items.name}
-                  runtime={items.runtime}
-                  rating={items.rating.average}
-                  genres={items.genres}
-                  status={items.status}
+                itemss={items}
+                  // id={items.id}
+                  // image={items.image.original}
+                  // name={items.name}
+                  // runtime={items.runtime}
+                  // rating={items.rating.average}
+                  // genres={items.genres}
+                  // status={items.status}
                 />
               )
           )}

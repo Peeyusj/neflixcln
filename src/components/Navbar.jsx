@@ -4,11 +4,14 @@ import "../styles/navbar.css";
 import face from "../assets/faceicon.png";
 import bell from "../assets/bell.png";
 import netflixlogo from "../assets/netflixlogo.png";
+import { Link, NavLink, useNavigate, } from "react-router-dom";
 
 const Navbar = (props) => {
   const [ishover, setIsHover] = useState(false);
   const [ishover1, setIsHover1] = useState(false);
   const [isscrolled, setIsScrolled] = useState(false);
+  let navigation=useNavigate()
+
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
   };
@@ -35,7 +38,6 @@ const Navbar = (props) => {
         document.getElementById("search").style.transitionDuration = "1.5s";
         document.getElementById("search").style.transitionDelay = "0.1s";
         document.getElementById("search").style.visibility = "hidden";
-
         document.getElementById("im1").style.visibility = "visible";
         document.getElementById("im1").style.pointerEvents = "auto";
       }
@@ -45,24 +47,25 @@ const Navbar = (props) => {
       document.removeEventListener("mousedown", handler);
     };
   });
+  let logohandler=()=>{
+    navigation("/")
+  }
 
   return (
     <div className={`navbar ${isscrolled && "scrll"}`}>
       <div className="part1">
         <div className="logo">
           <img
+          onClick={logohandler}
             src={netflixlogo}
-            style={{ width: "100px", height: "20px" }}
+            style={{ width: "100px", height: "20px",cursor:"pointer" }}
             alt=""
           />
         </div>
         <div className="navlinks">
-          <a href="">Home</a>
-          <a href="">TV Shows</a>
-          <a href="">Movies</a>
-          <a href="">New & Popular</a>
-          <a href="">My List</a>
-          <a href="">Browse by Languages</a>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/mylist'>My List</NavLink>
+          
         </div>
       </div>
       <div className="secright">

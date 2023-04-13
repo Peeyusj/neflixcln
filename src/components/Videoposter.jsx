@@ -1,25 +1,36 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import frn from "../assets/friends.mp4";
 import "../styles/videoposter.css";
 import mute from "../assets/postermute.png";
 import unmute from "../assets/posterunmute.png";
 import play from "../assets/play.png";
+import { useNavigate } from "react-router-dom";
 
 const Videoposter = () => {
+  let navigation=useNavigate()
   const [ismute, setIsMute] = useState(true);
   let vid = useRef();
+  // useEffect(()=>{})
   let playfn = () => {
     console.log("play");
     setTimeout(() => {
-      vid.current.play();
+     vid.current&&vid.current.play();
     }, 200);
   };
   let pausefn = () => {
     console.log("pause");
     setTimeout(() => {
-      vid.current.pause();
+      vid.current&&vid.current.pause();
     }, 800);
   };
+  let playhandler=(event)=>{
+    
+    navigation("/videoplayer")
+    event.stopPropagation();
+  }
+  let infohandler=()=>{
+    navigation("/")
+  }
   return (
     <div className="videopostcontainer">
       <video
@@ -51,23 +62,7 @@ const Videoposter = () => {
             professionals as they balance the intensity of their work with their
             personal lives
           </div>
-          <div className="pbtns">
-            <button
-              style={{
-                backgroundImage: `url(${play})`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                textIndent: "40px",
-                fontSize: "20px",
-              }}
-            >
-              {" "}
-              Play
-            </button>
-            <button className="infobtn" style={{ fontSize: "20px" }}>
-              More Info
-            </button>
-          </div>
+          
         </div>
         <div className="rightcontent">
           <div className="mutediv">
@@ -83,6 +78,31 @@ const Videoposter = () => {
           <div className="Rated">U/A</div>
         </div>
       </div>
+      <div className="pbtns">
+            <button
+            onClick={(event)=>playhandler(event)}
+              style={{
+                backgroundImage: `url(${play})`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                textIndent: "40px",
+                fontSize: "20px",
+                position:"relative",
+                zIndex:1,
+                pointerEvents:"all"
+              }}
+            >
+              {" "}
+              Play
+            </button>
+            <button 
+                   onClick={infohandler}
+            className="infobtn" style={{ fontSize: "20px", position:"relative",
+                zIndex:1,
+                pointerEvents:"all" }}>
+              More Info
+            </button>
+          </div>
     </div>
   );
 };

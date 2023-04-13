@@ -1,9 +1,19 @@
 .App {
   text-align: center;
-  height: 500vh;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-color: rgb(6, 17, 33);
+}
+.App1{
+  text-align: center;
+  height: 100vh;
   position: relative;
   width: 100%;
   z-index: 1;
   background-color:#141414;
-  
+}
+button{
+  cursor: pointer;
 }

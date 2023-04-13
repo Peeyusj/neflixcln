@@ -7,10 +7,22 @@ import info from "../assets/swipedown.png";
 import mute from "../assets/nosound.png";
 import unmute from "../assets/volume.png";
 import robin from "../assets/Robin.mp4";
+import { useNavigate} from "react-router-dom";
 const Videolistcard = (props) => {
   const [hvrhandler, setHvrhandler] = useState(false);
   const [ismute, setIsMute] = useState(false);
+  const [list, setList] = useState([]);
 
+ let navigation=useNavigate();
+ 
+  let playhandler=()=>{
+    navigation("/videoplayer")
+  }
+ 
+  let addhandler=(id)=>{
+    setList(props.itemss);
+    localStorage.setItem("list", JSON.stringify(list))
+  }
   return (
     <div
       className={`${classes.videoitem}`}
@@ -36,12 +48,12 @@ const Videolistcard = (props) => {
           />
         </div>
       )}
-      <img className={classes.imgfirst} src={props.image} alt={props.name} />
+      <img className={classes.imgfirst} src={props.itemss.image.original} alt={props.itemss.name} />
       <div className={`${classes.content} ${hvrhandler ? "" : ""} `}>
         <div className={classes.icon}>
           <div className={classes.icon1}>
             <div style={{ marginLeft: "3px" }}>
-              <img
+              <img onClick={playhandler}
                 style={{
                   backgroundColor: "white",
                   borderRadius: "50%",
@@ -52,7 +64,7 @@ const Videolistcard = (props) => {
                 alt=""
               />
             </div>
-            <div style={{ marginLeft: "6px" }}>
+            <div onClick={()=>addhandler(props.itemss.id)} style={{ marginLeft: "6px" }}>
               {" "}
               <img
                 style={{
@@ -107,7 +119,7 @@ const Videolistcard = (props) => {
                 color: "rgb(0, 163, 108)",
               }}
             >
-              {props.runtime}min
+              {props.itemss.runtime}min
             </div>
             <div
               style={{
@@ -120,7 +132,7 @@ const Videolistcard = (props) => {
                 boxSizing: "border-box",
               }}
             >
-              IMDB {props.rating}
+              IMDB {props.itemss.rating.average}
             </div>
             <div
               style={{
@@ -129,11 +141,11 @@ const Videolistcard = (props) => {
                 fontWeight: "bold",
               }}
             >
-              {props.status}
+              {props.itemss.status}
             </div>
           </div>
           <div className={classes.genres}>
-            <div>{props.genres[0]}</div>
+            <div>{props.itemss.genres[0]}</div>
             <div
               style={{
                 margin: "8px 3px 0px 8px",
@@ -145,8 +157,8 @@ const Videolistcard = (props) => {
             >
               {" "}
             </div>
-            {props.genres[1] && (
-              <div style={{ marginLeft: "5px" }}>{props.genres[1]}</div>
+            {props.itemss.genres[1] && (
+              <div style={{ marginLeft: "5px" }}>{props.itemss.genres[1]} </div>
             )}
             <div
               style={{
@@ -159,8 +171,8 @@ const Videolistcard = (props) => {
             >
               {" "}
             </div>
-            {props.genres[2] && (
-              <div style={{ marginLeft: "8px" }}>{props.genres[2]}</div>
+            {props.itemss.genres[2] && (
+              <div style={{ marginLeft: "8px" }}>{props.itemss.genres[2]}</div>
             )}
           </div>
         </div>

@@ -61,8 +61,11 @@ font-size: 18px;
 
 }
 .pbtns{
+    position: absolute;
     width: 40%;
-    margin-left: 45px;
+    margin-left: -21px;
+    top: 534px;
+    z-index: 3;
 }
 .pbtns button{
  
