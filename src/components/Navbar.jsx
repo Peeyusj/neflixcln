@@ -4,7 +4,7 @@ import "../styles/navbar.css";
 import face from "../assets/faceicon.png";
 import bell from "../assets/bell.png";
 import netflixlogo from "../assets/netflixlogo.png";
-import { Link, NavLink, useNavigate, } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = (props) => {
   const [ishover, setIsHover] = useState(false);

@@ -1,0 +1,66 @@
+.movieouterdiv{
+display: flex;
+flex-wrap: wrap;
+box-sizing: border-box;
+padding: 90px 50px;
+
+}
+
+.moviecard{
+color: white;
+margin: 10px 15px;
+height: 200px;
+}
+.imA img{
+    width: 200px;
+    height: 150px;
+}
+.m-name{
+    display: flex;
+height: 50px;
+background-color: rgb(73, 66, 66);
+justify-content: space-between;
+font-size: 19px;
+padding-left: 4px;
+}
+.m-name img{
+    margin: 4px 8px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+}
+.m-bg{
+width: 0%;
+z-index: -1;
+    text-indent: 10px;
+    text-align: initial;
+    font-weight: 800;
+    height: 75%;
+    background: rgba(0, 0, 0, 0.649);
+    position: relative;
+    top: -204px;
+}
+.moviecard:hover .m-bg{
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    z-index: 1;
+    width: 100%;
+}
+.cross{
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    font-size: 50px;
+    color: white;
+    top: 80px;
+    font-weight: 800;
+    left: 40px;
+    
+}
+.cross :hover{
+    color: rgba(137, 43, 226, 0.742);
+    text-decoration:overline;
+}

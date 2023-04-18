@@ -10,15 +10,12 @@ const Videoposter = () => {
   let navigation=useNavigate()
   const [ismute, setIsMute] = useState(true);
   let vid = useRef();
-  // useEffect(()=>{})
   let playfn = () => {
-    console.log("play");
     setTimeout(() => {
      vid.current&&vid.current.play();
     }, 200);
   };
   let pausefn = () => {
-    console.log("pause");
     setTimeout(() => {
       vid.current&&vid.current.pause();
     }, 800);

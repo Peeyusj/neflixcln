@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import classes from "../styles/videolistcard.module.css";
 import play from "../assets/play.png";
 import add from "../assets/plus.png";
@@ -11,18 +11,41 @@ import { useNavigate} from "react-router-dom";
 const Videolistcard = (props) => {
   const [hvrhandler, setHvrhandler] = useState(false);
   const [ismute, setIsMute] = useState(false);
-  const [list, setList] = useState([]);
 
+const getLocaldata=()=>{
+  let movie=JSON.parse(localStorage.getItem("list"))
+  if(movie==null){
+    return [];
+  }
+  else{
+    return movie;
+  }
+}
+const [list, setList] = useState(getLocaldata());
  let navigation=useNavigate();
  
   let playhandler=()=>{
+
     navigation("/videoplayer")
+    
   }
- 
   let addhandler=(id)=>{
-    setList(props.itemss);
-    localStorage.setItem("list", JSON.stringify(list))
+    // console.log(list.some((item)=>item.id==id))
+    // return setList([...list,props.itemss])
+    
+      if(list.some((item)=>item.id==id)){
+        alert("this movie is already in your list")
+      }
+    else {
+      return setList([...list,props.itemss])
+    }
+    
+
+
   }
+  useEffect(()=>{
+    localStorage.setItem("list", JSON.stringify(list))
+  },[list])
   return (
     <div
       className={`${classes.videoitem}`}

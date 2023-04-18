@@ -157,6 +157,10 @@
   justify-content: flex-start;
   align-items: center;
 }
+.active{
+  text-shadow: 4px 5px 8px rgba(245, 245, 245, 0.433);
+  text-decoration: overline;
+}
 
 @media (min-width: 1024px) and (max-width:1250px){
   .navlinks a{
