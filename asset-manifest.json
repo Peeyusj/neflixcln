@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/neflixcln/static/css/main.033e7dc3.css",
-    "main.js": "/neflixcln/static/js/main.d23506e6.js",
+    "main.js": "/neflixcln/static/js/main.fe4bf88e.js",
     "static/js/787.58b933ed.chunk.js": "/neflixcln/static/js/787.58b933ed.chunk.js",
     "static/media/friends.mp4": "/neflixcln/static/media/friends.e529feab261b61b7e403.mp4",
     "static/media/Robin.mp4": "/neflixcln/static/media/Robin.b5e7e0d7314411c4a62c.mp4",
@@ -12,11 +12,11 @@
     "static/media/user.png": "/neflixcln/static/media/user.98b33aba7d9355dd73ae.png",
     "index.html": "/neflixcln/index.html",
     "main.033e7dc3.css.map": "/neflixcln/static/css/main.033e7dc3.css.map",
-    "main.d23506e6.js.map": "/neflixcln/static/js/main.d23506e6.js.map",
+    "main.fe4bf88e.js.map": "/neflixcln/static/js/main.fe4bf88e.js.map",
     "787.58b933ed.chunk.js.map": "/neflixcln/static/js/787.58b933ed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.033e7dc3.css",
-    "static/js/main.d23506e6.js"
+    "static/js/main.fe4bf88e.js"
   ]
 }
