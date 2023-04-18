@@ -34,7 +34,7 @@ let navigation=useNavigate();
             {i.language}
           </div>
         </div>
-          </div>)||<div style={{fontSize:"80px",textAlign:"center",color:"white"}}>+Add Movies To Your List</div>
+          </div>)||<div style={{fontSize:"80px",textAlign:"center",color:"white",textShadow: "4px 5px 8px rgba(245, 245, 245, 0.433)"}}>+Add Movies To Your List</div>
      } 
     </div>
   )

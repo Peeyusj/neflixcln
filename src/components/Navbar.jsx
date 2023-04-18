@@ -63,7 +63,7 @@ const Navbar = (props) => {
           />
         </div>
         <div className="navlinks">
-          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/neflixcln/'>Home</NavLink>
           <NavLink to='/mylist'>My List</NavLink>
           
         </div>

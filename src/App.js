@@ -37,7 +37,7 @@ setPath(res)
         <Dropbart val1={val1} />
       </div>
       <Routes>
-        <Route path="/" element={
+        <Route path="/neflixcln/" element={
           <div>
           <Videoposter/>
           <Vidcrsl/>
